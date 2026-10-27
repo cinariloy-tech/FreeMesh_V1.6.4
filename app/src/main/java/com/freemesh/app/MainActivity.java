@@ -38,10 +38,6 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public boolean connected() { return ble != null && ble.isConnected(); }
 
-        // Yönlendirme: mesajı, geldiği bağlantı hariç diğer bağlantılara iletir
-        @JavascriptInterface
-        public void relay(String json, String via) { if (ble != null) ble.relay(json, via); }
-
         // Bu telefonun kalıcı kimliği (PH-XXXXXX)
         @JavascriptInterface
         public String myId() { return ble != null ? ble.myId() : "PH-LOCAL"; }
