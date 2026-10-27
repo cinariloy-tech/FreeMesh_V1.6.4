@@ -112,6 +112,9 @@ public class FreeMeshBle {
 
     void setVoice(Voice v) { voice = v; }
 
+    /** Bu telefonun kimliği (PH-XXXXXX). */
+    String myId() { return myId; }
+
     // Telefonun kalıcı kimliği (ilk açılışta üretilir)
     private static String loadId(Context c) {
         SharedPreferences p = c.getSharedPreferences("freemesh", Context.MODE_PRIVATE);
